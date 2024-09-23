@@ -1,25 +1,52 @@
-
-.logo{
+.logo {
     opacity: 0;
     transition: opacity 230ms ease-in-out;
 }
 
-.logo:hover{
+.logo:hover {
     opacity: 1;
 }
 
-@keyframes Myspinner {
-    from {
-        transform: rotate(0deg);
-    } 25% {
-        transform: rotate(-45deg);
-    } to{
-        transform: rotate(360deg);
-    }
-    
+.spinner {
+    animation: Myspinner 3s linear infinite;
 }
 
-.spinner {
-    animation: Myspinner 4;
+@keyframes Myspinner {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+
+    to {
+        transform: translateX(160px) rotate(360deg); 
+    }
+}
+
+.spinner2 {
+    animation: Myspinner2 4s;
     animation-iteration-count: infinite;
+}
+
+@keyframes Myspinner2 {
+    from {
+        transform: rotate(0deg) translate(0px);
+        
+
+    } 
+    
+    25% {
+        transform: translate(-40px);
+        
+        
+    } 
+    50%{
+        transform: rotate(-45deg);
+        
+        
+    } 
+    to{
+        
+        transform:rotate(360deg) ;
+    } 
+    
 }
